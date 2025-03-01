@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Greeting from './Greeting' // ✅ Importing Greeting component
+
+// Import the Greeting component
+import Greeting from './Greeting';  // Add this line
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,10 +20,6 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      
-      {/* ✅ Adding the Greeting component below */}
-      <Greeting />
-
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -33,7 +31,14 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      {/* Use Greeting component here */}
+      <Greeting />  {/* This will display your Greeting component */}
     </>
+  );
+}
+
+export default App;
   )
 }
 
